@@ -1,0 +1,42 @@
+{
+  "name": "@vclerc/test-server",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A dummy server",
+  "keywords": [
+    "nestjs",
+    "server",
+    "dummy"
+  ],
+  "author": "vclerc <valentin.clerc@neuf.fr>",
+  "license": "ISC",
+  "main": "lib/test-server.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p ./",
+    "start": "npm run build && ts-node src/main.ts",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "devDependencies": {
+    "@nestjs/platform-express": "^6.11.7",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "@nestjs/common": "^6.11.7",
+    "@nestjs/core": "^6.11.7",
+    "@vclerc/utility": "^0.0.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.4"
+  }
+}
