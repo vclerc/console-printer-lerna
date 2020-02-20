@@ -1,16 +1,11 @@
 {
-  "name": "@vclerc/test-server",
-  "version": "0.1.4",
-  "private": true,
-  "description": "A dummy server",
-  "keywords": [
-    "nestjs",
-    "server",
-    "dummy"
-  ],
+  "name": "@vclerc/test-server-alt",
+  "version": "0.1.0",
+  "description": "Second test server",
+  "keywords": [],
   "author": "vclerc <valentin.clerc@neuf.fr>",
   "license": "ISC",
-  "main": "lib/test-server.js",
+  "main": "lib/test-server-alt.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -18,8 +13,9 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-    "access": "public"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vclerc/console-printer-lerna.git"
   },
   "scripts": {
     "build": "tsc -p ./",
