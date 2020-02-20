@@ -10,6 +10,6 @@ export class ConsoleUtility {
     }
 
     public print(content: string) {
-        this._consoleWrapper.print(`[${this._tag}]-${content}`);
+        this._consoleWrapper.print(`[${this._tag}]_${content}`);
     }
 }
