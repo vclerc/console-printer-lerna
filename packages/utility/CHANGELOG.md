@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/vclerc/console-printer-lerna/compare/v0.2.1...v0.2.2) (2020-02-20)
+
+
+### Bug Fixes
+
+* Revert tag presentation to underscore ([b4f7c06](https://github.com/vclerc/console-printer-lerna/commit/b4f7c06d50f55e87805ab0fcb1cf323efed688be))
+
+
+
+
+
 ## [0.2.1](https://github.com/vclerc/console-printer-lerna/compare/v0.2.0...v0.2.1) (2020-02-20)
 
 
