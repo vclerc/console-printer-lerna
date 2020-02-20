@@ -5,12 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.2.0](https://github.com/vclerc/console-printer-lerna/compare/v0.1.8...v0.2.0) (2020-02-20)
 
-**Note:** Version bump only for package @vclerc/test-server-alt
 
+### Features
 
-
-
-
-## [0.1.8](https://github.com/vclerc/console-printer-lerna/compare/v0.1.7...v0.1.8) (2020-02-20)
-
-**Note:** Version bump only for package @vclerc/test-server-alt
+* Update console color to Cyan ([c4fc4e2](https://github.com/vclerc/console-printer-lerna/commit/c4fc4e2da3a5e6637888add4d185c46a175ce0c0))
