@@ -1,6 +1,6 @@
 {
   "name": "@vclerc/utility",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Collection of utility classes",
   "keywords": [
     "util",
@@ -27,6 +27,6 @@
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "@vclerc/console-wrapper": "^0.2.4"
+    "@vclerc/console-wrapper": "^0.2.5"
   }
 }
