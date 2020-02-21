@@ -1,6 +1,6 @@
 {
   "name": "@vclerc/test-server-alt",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Second test server",
   "keywords": [],
   "author": "vclerc <valentin.clerc@neuf.fr>",
@@ -31,7 +31,7 @@
   "dependencies": {
     "@nestjs/common": "^6.11.7",
     "@nestjs/core": "^6.11.7",
-    "@vclerc/utility": "^0.2.2",
+    "@vclerc/utility": "^0.2.3",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.4"
   }
