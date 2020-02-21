@@ -1,7 +1,6 @@
 {
   "name": "@vclerc/console-wrapper",
   "version": "0.2.3",
-  "private": true,
   "description": "Small console wrapper",
   "keywords": [
     "console",
