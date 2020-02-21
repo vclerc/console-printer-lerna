@@ -1,7 +1,24 @@
 {
+  "ignoreChanges": [
+    "**/*.md"
+  ],
   "command": {
     "bootstrap": {
       "hoist": true
+    },
+    "version": {
+      "allowBranch": [
+        "master",
+        "dev",
+        "feature/*",
+        "fix/*"
+      ],
+      "conventional-commits": true,
+      "force-publish": [
+        "@vclerc/console-wrapper"
+      ],
+      "create-release": true,
+      "message": "chore(release): publish %v"
     }
   },
   "packages": [
