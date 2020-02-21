@@ -1,7 +1,6 @@
 {
   "name": "@vclerc/utility",
   "version": "0.2.3",
-  "private": true,
   "description": "Collection of utility classes",
   "keywords": [
     "util",
