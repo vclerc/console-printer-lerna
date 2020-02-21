@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/vclerc/console-printer-lerna/compare/v0.2.3...v0.2.4) (2020-02-21)
+
+
+### Bug Fixes
+
+* Update console color to print in Yellow ([c424a60](https://github.com/vclerc/console-printer-lerna/commit/c424a6094911ec3219d3e5bcd2d252c2ae88ea0d))
+
+
+
+
+
 ## [0.2.3](https://github.com/vclerc/console-printer-lerna/compare/v0.2.2...v0.2.3) (2020-02-21)
 
 **Note:** Version bump only for package @vclerc/console-wrapper
