@@ -13,12 +13,16 @@
         "feature/*",
         "fix/*"
       ],
-      "conventional-commits": true,
-      "force-publish": [
-        "@vclerc/console-wrapper"
-      ],
-      "create-release": true,
       "message": "chore(release): publish %v"
+    },
+    "publish": {
+      "allowBranch": [
+        "master",
+        "dev",
+        "feature/*",
+        "fix/*"
+      ],
+      "message": "chore(relesae): publish %v"
     }
   },
   "packages": [
