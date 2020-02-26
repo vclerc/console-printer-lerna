@@ -7,7 +7,7 @@ export class AppService {
     private _consoleUtility: ConsoleUtility = new ConsoleUtility('tag');
 
     print() {
-        this._consoleUtility.print('test');
+        this._consoleUtility.print('test1');
     }
 
 }
