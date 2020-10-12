@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/vclerc/console-printer-lerna/compare/v0.2.8...v0.3.0) (2020-10-12)
+
+
+### Bug Fixes
+
+* Update console wrapper ([82456ae](https://github.com/vclerc/console-printer-lerna/commit/82456ae31faab6dc48fffdaa12a5e9df2386ab68))
+
+
+### Features
+
+* Update template ([9a690f4](https://github.com/vclerc/console-printer-lerna/commit/9a690f4ecd63d41e151c35e69c7c5f6d22cb8f42))
+
+
+
+
+
+
 ## [0.2.5](https://github.com/vclerc/console-printer-lerna/compare/v0.2.4...v0.2.5) (2020-02-21)
 
 
