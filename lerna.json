@@ -11,7 +11,8 @@
         "master",
         "dev",
         "feature/*",
-        "fix/*"
+        "fix/*",
+        "release/*"
       ],
       "message": "chore(release): publish %v"
     },
@@ -28,5 +29,5 @@
   "packages": [
     "packages/*"
   ],
-  "version": "0.2.8"
+  "version": "0.3.0"
 }
