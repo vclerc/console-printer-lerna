@@ -4,10 +4,10 @@ import { ConsoleUtility } from '@vclerc/utility';
 @Injectable()
 export class AppService {
 
-    private _consoleUtility: ConsoleUtility = new ConsoleUtility('tla');
+    private _consoleUtility: ConsoleUtility = new ConsoleUtility('alt');
 
     print() {
-        this._consoleUtility.print('test-server-alt');
+        this._consoleUtility.print('test-server-alt2');
     }
 
 }
