@@ -11,7 +11,7 @@
         "master",
         "dev",
         "feature/*",
-        "fix/*",
+        "hotfix/*",
         "release/*"
       ],
       "message": "chore(release): publish %v"
