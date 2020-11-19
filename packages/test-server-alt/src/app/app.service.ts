@@ -7,7 +7,7 @@ export class AppService {
     private _consoleUtility: ConsoleUtility = new ConsoleUtility('alt');
 
     print() {
-        this._consoleUtility.print('test-server - 2');
+        this._consoleUtility.print('test-server - 2.1');
     }
 
 }
