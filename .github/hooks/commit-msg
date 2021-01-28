@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+import re, sys, os
+
+def main():
+    print("Args: ", sys.argv)
+    pattern = r'(build|ci|docs|feat|fix|perf|refactor|style|test|chore|revert)(\([\w\-]+\))?:\s.*'
+    filename = sys.argv[1]
+    ss = open(filename, 'r').read()
+    m = re.match(pattern, ss)
+    if m == Non: raise Exception("conventional commit validation failed")
+
+if __name__ == "__main__":
+    main()
