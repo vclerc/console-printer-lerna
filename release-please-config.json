@@ -1,0 +1,10 @@
+{
+    "bootstrap-sha": "0555bf3777000d737ecdc06fce7ddc5dc0af4af9",
+    "release-type": "node",
+    "packages": {
+        "packages/console-wrapper": {},
+        "packages/test-server": {},
+        "packages/test-server-alt": {},
+        "packages/test-utility": {}
+    }
+}
