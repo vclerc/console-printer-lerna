@@ -5,6 +5,6 @@
         "packages/console-wrapper": {},
         "packages/test-server": {},
         "packages/test-server-alt": {},
-        "packages/test-utility": {}
+        "packages/utility": {}
     }
 }
