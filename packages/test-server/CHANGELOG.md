@@ -26,6 +26,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+## 1.0.0 (2022-07-27)
+
+
+### Bug Fixes
+
+* update messages ([25bce25](https://github.com/vclerc/console-printer-lerna/commit/25bce25fdb15fac16fa13cdd00c35ad70ff90710))
+
 ## [0.2.8](https://github.com/vclerc/console-printer-lerna/compare/v0.2.7...v0.2.8) (2020-02-27)
 
 
