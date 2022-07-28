@@ -1,8 +1,8 @@
 on:
   push:
     branches:
-      - 'feature/**'
-      - dev
+      - main
+      - 'support/**'
 
 name: release-please
 
