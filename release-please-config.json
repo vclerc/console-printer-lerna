@@ -1,5 +1,5 @@
 {
-    "bootstrap-sha": "0555bf3777000d737ecdc06fce7ddc5dc0af4af9",
+    "bootstrap-sha": "873548d44157d5688548d30218d98586cffc1928",
     "release-type": "node",
     "packages": {
         "packages/console-wrapper": {},
