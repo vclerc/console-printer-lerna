@@ -1,8 +1,9 @@
 {
     "bootstrap-sha": "873548d44157d5688548d30218d98586cffc1928",
-    "release-type": "node",
+    "monorepo-tags": true,
     "packages": {
         "packages/test-server": {},
         "packages/test-server-alt": {}
-    }
+    },
+    "release-type": "node"
 }
