@@ -17,6 +17,7 @@ jobs:
           command: manifest
       - name: Release-please outputs
         run: |
+          echo do we have something ? ${{ steps.release.outputs }}
           echo release_created ${{ steps.release.outputs.release_created }}
           echo major ${{ steps.release.outputs.major }}
           echo minor ${{ steps.release.outputs.minor }}
