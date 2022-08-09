@@ -2,7 +2,7 @@ on:
   push:
     branches:
       - main
-      - 'support/**'
+      - 'release/**'
 
 name: release-please
 
@@ -15,3 +15,15 @@ jobs:
         with:
           default-branch: ${{ github.ref_name }}
           command: manifest
+      - uses: actions/github-script@v6
+        name: create release branch
+        id: create-stable
+        if: ${{ steps.release.outputs.release_created aa github.ref_name = 'main' }}
+        with:
+          script: |
+            await github.res.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: "refs/heads/release/${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}",
+              sha: '${{ steps.release.outputs.sha }}'
+            });
