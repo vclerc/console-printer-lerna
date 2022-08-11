@@ -1,0 +1,36 @@
+on:
+  push:
+    branches:
+      - main
+      - 'release/**'
+
+name: release-please-2
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          default-branch: ${{ github.ref_name }}
+          command: manifest
+      - name: Release-please outputs
+        run: |
+          echo do we have something ? ${{ steps.release.outputs }}
+          echo release_created ${{ steps.release.outputs.release_created }}
+          echo major ${{ steps.release.outputs.major }}
+          echo minor ${{ steps.release.outputs.minor }}
+          echo branch ${{ github.ref_name }}
+      - uses: actions/github-script@v6
+        name: create release branch
+        id: create-stable
+        if: ${{ steps.release.outputs.release_created && github.ref_name == 'main' }}
+        with:
+          script: |
+            await github.res.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: "refs/heads/release/${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}",
+              sha: '${{ steps.release.outputs.sha }}'
+            });
