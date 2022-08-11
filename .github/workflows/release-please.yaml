@@ -14,7 +14,7 @@ jobs:
         id: release
         with:
           default-branch: ${{ github.ref_name }}
-          command: manifest
+          command: manifest-pr
       - name: Release-please outputs
         run: |
           echo do we have something ? ${{ steps.release.outputs }}
