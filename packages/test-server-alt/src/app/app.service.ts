@@ -7,7 +7,7 @@ export class AppService {
     private _consoleUtility: ConsoleUtility = new ConsoleUtility('alt');
 
     print() {
-        this._consoleUtility.print('test-server - alt server');
+        this._consoleUtility.print('test-server - alt server - test');
     }
 
 }
