@@ -17,13 +17,11 @@ jobs:
           command: manifest-pr
       - name: Release-please outputs
         run: |
-          echo do we have something ? ${{ steps.release.outputs }}
+          echo do we have something ? ${{ toJSON(steps.release.outputs) }}
           echo release_created ${{ steps.release.outputs.release_created }}
           echo major ${{ steps.release.outputs.major }}
           echo minor ${{ steps.release.outputs.minor }}
           echo branch ${{ github.ref_name }}
-      - uses: hmarr/debug-action@v2.0.1
-        name: Debug
       - uses: actions/github-script@v6
         name: create release branch
         id: create-stable
