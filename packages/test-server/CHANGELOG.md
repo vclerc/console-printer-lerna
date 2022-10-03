@@ -26,6 +26,21 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+## [1.0.8](https://github.com/vclerc/console-printer-lerna/compare/test-server-v1.0.7...test-server-v1.0.8) (2022-10-03)
+
+
+### Bug Fixes
+
+* update main server message ([#31](https://github.com/vclerc/console-printer-lerna/issues/31)) ([0cd4035](https://github.com/vclerc/console-printer-lerna/commit/0cd40357870ada64e49ee86ecf4268a97379e98c))
+* update mains erver response ([0b66b84](https://github.com/vclerc/console-printer-lerna/commit/0b66b84baba611c7c08ae987c2638c852f497b47))
+* update mains erver response ([28522aa](https://github.com/vclerc/console-printer-lerna/commit/28522aa94e31b50a727985aee885f931cb93a30e))
+* update mains erver response ([43f1985](https://github.com/vclerc/console-printer-lerna/commit/43f198594d7a4af72fa16be467b0740398ac8ca9))
+* update mains erver response ([23b91b8](https://github.com/vclerc/console-printer-lerna/commit/23b91b8a0d2322726fd8680ee3b5d26d2bd23521))
+* update response for main server ([73520c1](https://github.com/vclerc/console-printer-lerna/commit/73520c1bd257c01200a2a6da6e00ee2db258315b))
+* update test server text ([3d16ff0](https://github.com/vclerc/console-printer-lerna/commit/3d16ff0cd479b3b88b94ceda6c5843697db5309b))
+* update test server text ([8d8fb9b](https://github.com/vclerc/console-printer-lerna/commit/8d8fb9be02c1b693ff365624cd1eff1a8d3f1889))
+* update test server text ([a5f2bd4](https://github.com/vclerc/console-printer-lerna/commit/a5f2bd492cef2b1c6671573f822a6d7ae6a11f7e))
+
 ## [1.0.7](https://github.com/vclerc/console-printer-lerna/compare/test-server-v1.0.6...test-server-v1.0.7) (2022-10-03)
 
 
