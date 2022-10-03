@@ -22,6 +22,8 @@ jobs:
           echo major ${{ steps.release.outputs.major }}
           echo minor ${{ steps.release.outputs.minor }}
           echo branch ${{ github.ref_name }}
+      - uses: hmarr/debug-action@v2.0.1
+        name: Debug
       - uses: actions/github-script@v6
         name: create release branch
         id: create-stable
