@@ -18,16 +18,9 @@ jobs:
       - name: Set current date
         id: set_date
         run: echo "::set-output name=date::$(date + '%Y%m%d')"
-      - name: Test Outputs
-        id: test_output
-        run: echo "::set-output name=FOO::BAR"
       - name: Test reading output
         id: read_output
-        run: echo release_created ${{ toJSON(steps.test_output.outputs.FOO) }}
-      - name: Release-please outputs 1
-        run: echo release_created ${{ toJSON(steps.release.outputs.releases_created) }}
-      - name: Release-please outputs 2
-        run: echo major ${{ toJSON(steps.release.outputs) }}
+        run: echo release_created ${{ toJSON(steps.set_date.outputs.date) }}
       - uses: actions/github-script@v6
         name: create release branch
         id: create-stable
