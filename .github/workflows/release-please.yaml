@@ -20,20 +20,20 @@ jobs:
         run: echo "::set-output name=FOO::BAR"
       - name: Test reading output
         id: read_output
-        run: echo Test ${{ toJSON(steps.test_output.outputs.FOO) }}
+        run: echo release_created ${{ toJSON(steps.test_output.outputs.FOO) }}
       - name: Release-please outputs 1
-        run: echo release_created ${{ toJSON(steps.release.outputs.release_created) }}
+        run: echo release_created ${{ toJSON(steps.release_step.outputs.release_created) }}
       - name: Release-please outputs 2
-        run: echo major ${{ toJSON(steps.release.outputs.major) }}
+        run: echo major ${{ toJSON(steps.release_step.outputs.major) }}
       - uses: actions/github-script@v6
         name: create release branch
         id: create-stable
-        if: ${{ steps.release.outputs.release_created && github.ref_name == 'main' }}
+        if: ${{ steps.release_step.outputs.release_created && github.ref_name == 'main' }}
         with:
           script: |
             await github.res.git.createRef({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              ref: "refs/heads/release/${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}",
+              ref: "refs/heads/release/${{ steps.release_step.outputs.major }}.${{ steps.release_step.outputs.minor }}",
               sha: '${{ steps.release.outputs.sha }}'
             });
