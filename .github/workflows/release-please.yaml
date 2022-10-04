@@ -34,5 +34,5 @@ jobs:
               sha: '${{ steps.release.outputs.sha }}'
             });
       - name: Test reading output
-        id: read_output
+        id: read_output_2
         run: echo release_created ${{ toJSON(steps.release.outputs) }}
