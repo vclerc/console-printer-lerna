@@ -17,7 +17,7 @@ jobs:
           command: manifest
       - name: Set current date
         id: set_date
-        run: echo "::set-output name=date::$(date + '%Y%m%d')"
+        run: echo "::set-output name=date::$(date + '%Y-%m-%d')"
       - name: Test reading output
         id: read_output
         run: echo release_created ${{ toJSON(steps.set_date.outputs.date) }}
