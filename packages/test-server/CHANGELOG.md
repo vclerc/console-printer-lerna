@@ -26,6 +26,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+## [1.0.16](https://github.com/vclerc/console-printer-lerna/compare/test-server-v1.0.15...test-server-v1.0.16) (2022-10-04)
+
+
+### Bug Fixes
+
+* update server ([41b6e7c](https://github.com/vclerc/console-printer-lerna/commit/41b6e7c0fc79cc43f7c77aa45e4a8d9aed481a58))
+
 ## [1.0.15](https://github.com/vclerc/console-printer-lerna/compare/test-server-v1.0.14...test-server-v1.0.15) (2022-10-04)
 
 
