@@ -17,11 +17,11 @@ jobs:
           command: manifest
       - name: Release-please outputs
         run: |
-          echo do we have something ? ${{ toJSON(steps.release.outputs.release_created) }}
-          echo release_created ${{ steps.release.outputs.release_created }}
-          echo major ${{ steps.release.outputs.major }}
-          echo minor ${{ steps.release.outputs.minor }}
-          echo branch ${{ github.ref_name }}
+          echo do we have something ? ${{ toJSON(steps.release.outputs) }}
+          echo release_created ${{ toJSON(steps.release.outputs.release_created) }}
+          echo major ${{ toJSON(steps.release.outputs.major) }}
+          echo minor ${{ toJSON(steps.release.outputs.minor) }}
+          echo branch ${{ toJSON(github.ref_name) }}
       - uses: actions/github-script@v6
         name: create release branch
         id: create-stable
