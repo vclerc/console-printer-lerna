@@ -24,7 +24,7 @@ jobs:
       - uses: actions/github-script@v6
         name: create release branch
         id: create-stable
-        if: ${{ steps.release_step.outputs.release_created && github.ref_name == 'main' }}
+        if: ${{ steps.release_step.outputs.releases_created && github.ref_name == 'main' }}
         with:
           script: |
             await github.res.git.createRef({
