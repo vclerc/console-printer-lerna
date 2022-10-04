@@ -20,7 +20,7 @@ jobs:
         run: echo "::set-output name=FOO::BAR"
       - name: Test reading output
         id: read_output
-        run: echo Test ${{ toJSON(steps.test_output.outputs) }}
+        run: echo Test ${{ toJSON(steps.test_output.outputs.FOO) }}
       - name: Release-please outputs
         run: |
           echo release_created ${{ toJSON(steps.release.outputs.release_created) }}
