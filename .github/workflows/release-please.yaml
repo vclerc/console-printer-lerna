@@ -15,6 +15,12 @@ jobs:
         with:
           default-branch: ${{ github.ref_name }}
           command: manifest
+      - name: Test Outputs
+        id: test_output
+        run: echo "::set-output name=FOO::BAR"
+      - name: Test reading output
+        id: read_output
+        run: echo Test ${{ toJSON(steps.test_ouptut.outputs.FOO }}
       - name: Release-please outputs
         run: |
           echo release_created ${{ toJSON(steps.release.outputs.release_created) }}
