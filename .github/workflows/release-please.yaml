@@ -33,3 +33,6 @@ jobs:
               ref: "refs/heads/release/${{ steps.set_date.outputs.date }}",
               sha: '${{ steps.release.outputs.sha }}'
             });
+      - name: Test reading output
+        id: read_output
+        run: echo release_created ${{ toJSON(steps.release.outputs) }}
