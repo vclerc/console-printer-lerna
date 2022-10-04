@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v3.5.0
-        id: release
+        id: release_step
         with:
           default-branch: ${{ github.ref_name }}
           command: manifest
