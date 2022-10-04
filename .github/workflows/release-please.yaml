@@ -22,7 +22,7 @@ jobs:
         id: read_output
         run: echo release_created ${{ toJSON(steps.test_output.outputs.FOO) }}
       - name: Release-please outputs 1
-        run: echo release_created ${{ toJSON(steps.release_step.outputs) }}
+        run: echo release_created ${{ toJSON(steps.release_step.outputs.release_created) }}
       - name: Release-please outputs 2
         run: echo major ${{ toJSON(steps.release_step.outputs.paths_released) }}
       - uses: actions/github-script@v6
