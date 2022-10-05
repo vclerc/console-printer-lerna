@@ -31,7 +31,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               ref: "refs/heads/release/${{ steps.set_date.outputs.date }}",
-              sha: '${{ steps.release.outputs.packages/test-server--sha }}'
+              sha: '${{ github.sha }}'
             });
       - name: Test reading output
         id: read_output_2
