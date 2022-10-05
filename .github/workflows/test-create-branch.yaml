@@ -1,0 +1,26 @@
+on:
+  workflow_dispatch:
+
+name: test-create-branch
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set current date
+        id: set_date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+      - uses: actions/github-script@v6
+        name: create release branch
+        id: create-stable
+        with:
+          script: |
+            await github.rest.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: "refs/heads/release/${{ steps.set_date.outputs.date }}",
+              sha: '${{ github.sha }}'
+            });
+      - name: Read results
+        id: check-results
+        run: echo "${{ steps.create-stable.outputs.result }}"
