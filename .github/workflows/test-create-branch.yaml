@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Set current date
         id: set_date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        run: echo "::set-output name=date::$(date +'%Y%m%d')"
       - uses: actions/github-script@v6
         name: create release branch
         id: create-stable
