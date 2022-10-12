@@ -17,7 +17,7 @@ jobs:
           command: manifest
       - name: Set current date
         id: set_date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        run: echo "::set-output name=date::$(date +'%Y%m%d')"
       - name: Test reading output
         id: read_output
         run: echo release_created ${{ toJSON(steps.set_date.outputs.date) }}
@@ -27,7 +27,7 @@ jobs:
         if: ${{ steps.release.outputs.releases_created && github.ref_name == 'main' }}
         with:
           script: |
-            await github.res.git.createRef({
+            await github.rest.git.createRef({
               owner: context.repo.owner,
               repo: context.repo.repo,
               ref: "refs/heads/release/${{ steps.set_date.outputs.date }}",
@@ -36,3 +36,6 @@ jobs:
       - name: Test reading output
         id: read_output_2
         run: echo release_created ${{ toJSON(steps.release.outputs) }}
+      - name: Read results
+        id: check-results
+        run: echo "${{ steps.create-stable.outputs.result }}"
