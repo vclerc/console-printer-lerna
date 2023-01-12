@@ -1,6 +1,6 @@
 {
   "name": "@vclerc/test-server-alt",
-  "version": "1.0.2",
+  "version": "1.0.19-rc.1",
   "private": true,
   "description": "Second test server",
   "keywords": [],
