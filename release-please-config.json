@@ -1,9 +1,21 @@
 {
-    "bootstrap-sha": "873548d44157d5688548d30218d98586cffc1928",
     "monorepo-tags": true,
     "packages": {
-        "packages/test-server": {},
-        "packages/test-server-alt": {}
+        "packages/test-server": {
+            "component": "test"
+        },
+        "packages/test-server-alt": {
+            "component": "test2"
+        }
     },
-    "release-type": "node"
+    "release-type": "node",
+    "plugins": [
+        {
+            "type": "linked-versions",
+            "group-name": "servers",
+            "components": [
+                "test", "test2"
+            ]
+        }
+    ]
 }
