@@ -23,20 +23,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          ref: feature/automated_versions_bump
       - id: update-env
         run: |
           file=test.env
           sed -i 's/${{inputs.targetVariable}}=.*/${{inputs.targetVariable}}=${{inputs.newValue}}/' $file
-          
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-          git add .
-          git commit -m "chore: sync packages version ${current_version}"
-          git push origin
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-          branch: main
-          base: feature/automated_versions_bump
+          branch: feature/automated_versions_bump
