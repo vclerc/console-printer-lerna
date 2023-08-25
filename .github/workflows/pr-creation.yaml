@@ -1,5 +1,17 @@
 on:
   workflow_dispatch:
+    inputs:
+      targetVariable:
+        description: Env variable to be update
+        required: true
+        type: choice
+        options:
+          - TEST_1
+          - TEST_2
+      newValue:
+        description: Value to be assigned to the targeted env variable
+        required: true
+        type: string
 
 name: pr-creation
 
@@ -11,6 +23,6 @@ jobs:
       - id: update-env
         run: |
           file=test.env
-          sed -i 's/TEST_2=.*/TEST_2=foo/' $file
+          sed -i 's/${{inputs.targetVariable}}=.*/${{inputs.targetVariable}}=${{inputs.newValue}}/' $file
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
