@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: "${{env.BRANCH}}"
+          ref: feature/automated_versions_bump
       - id: update-env
         run: |
           file=test.env
@@ -38,4 +38,4 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-          base: env.MAIN_BRANCH
+          base: main
