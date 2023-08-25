@@ -1,0 +1,16 @@
+on:
+  workflow_dispatch:
+
+name: pr-creation
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - id: update-env
+        run: |
+          file=test.env
+          sed -i 's/TEST_1=.*/TEST_1=bar/' $file
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
