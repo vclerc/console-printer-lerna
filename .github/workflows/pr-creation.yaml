@@ -11,6 +11,6 @@ jobs:
       - id: update-env
         run: |
           file=test.env
-          sed -i 's/TEST_1=.*/TEST_1=bar/' $file
+          sed -i 's/TEST_2=.*/TEST_2=foo/' $file
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
