@@ -35,10 +35,5 @@ jobs:
           git add .
           git commit -m "chore: sync packages version ${current_version}"
           git push origin
-      - uses: actions/checkout@v3
-        with:
-          ref: main
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
-        with:
-          branch: feature/automated_versions_bump
+
+            
