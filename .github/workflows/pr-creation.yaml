@@ -38,4 +38,5 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
+          branch: feature/automated_versions_bump
           base: main
