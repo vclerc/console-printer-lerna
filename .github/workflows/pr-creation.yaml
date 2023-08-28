@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          ref: feature/automated_versions_bump
       - id: update-env
         run: |
+          git checkout -B ${{vars.HEAD_BRANCH}}
+          
           file=test.env
           sed -i 's/${{github.event.client_payload.targetVariable}}=.*/${{github.event.client_payload.targetVariable}}=${{github.event.client_payload.newValue}}/' $file
           
@@ -31,7 +31,7 @@ jobs:
           script: |
             let res = await github.rest.pulls.list({
               owner: '${{github.repository_owner}}',
-                repo: '${{github.repository}}',
+              repo: '${{github.repository}}',
               state: 'open',
               head: '${{github.repository_owner}}:${{vars.HEAD_BRANCH}}',
               base: '${{vars.BASE_BRANCH}}'
