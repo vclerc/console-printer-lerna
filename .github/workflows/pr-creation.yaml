@@ -27,9 +27,9 @@ jobs:
 
       - uses: actions/github-script@v6
         id: open-pull-request
+        env:
+          BASE_BRANCH: ${{ vars.BASE_BRANCH }}
         with:
-          env:
-            BASE_BRANCH: ${{ vars.BASE_BRANCH }}
           script: |
             console.log("CONTEXT: " + $BASE_BRANCH);
             
