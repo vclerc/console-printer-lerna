@@ -29,7 +29,10 @@ jobs:
         id: open-pull-request
         with:
           script: |
-            console.log("TEST: " + github)
+            console.log("CONTEXT: " + JSON.stringify(${{github.context}}));
+            console.log("VARS: " + JSON.stringify(${{github.vars}}));
+            console.log("SECRETS: " + JSON.stringify(${{github.secrets}}));
+            
             let res = await github.rest.pulls.list({
               owner: 'vclerc',
               repo: 'console-printer-lerna',
