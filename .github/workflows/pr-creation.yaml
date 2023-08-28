@@ -49,4 +49,5 @@ jobs:
               base: 'main'
             });
             
-            console.log('res: ' + JSON.stringify(res));
+            console.log('what we get: ' + JSON.stringify(res));
+            console.log('what we get: ' + res);
