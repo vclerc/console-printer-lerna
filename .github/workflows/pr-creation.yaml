@@ -45,7 +45,7 @@ jobs:
               owner: 'vclerc',
               repo: 'console-printer-lerna',
               state: 'open',
-              head: 'feature/automated_versions_bump',
+              head: 'vclerc:feature/automated_versions_bump',
               base: 'main'
             });
             
