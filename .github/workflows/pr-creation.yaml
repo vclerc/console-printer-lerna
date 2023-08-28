@@ -1,20 +1,23 @@
 on:
-  workflow_dispatch:
-    inputs:
-      targetVariable:
-        description: Env variable to be update
-        required: true
-        type: choice
-        options:
-          - TEST_1
-          - TEST_2
-      newValue:
-        description: Value to be assigned to the targeted env variable
-        required: true
-        type: string
-    env:
-      BRANCH: feature/automated_versions_bump
-      MAIN_BRANCH: main
+#  workflow_dispatch:
+#    inputs:
+#      targetVariable:
+#        description: Env variable to be update
+#        required: true
+#        type: choice
+#        options:
+#          - TEST_1
+#          - TEST_2
+#      newValue:
+#        description: Value to be assigned to the targeted env variable
+#        required: true
+#        type: string
+#    env:
+#      BRANCH: feature/automated_versions_bump
+#      MAIN_BRANCH: main
+  repository_dispatch:
+    types: version-bump
+
 
 name: pr-creation
 
@@ -28,12 +31,12 @@ jobs:
       - id: update-env
         run: |
           file=test.env
-          sed -i 's/${{inputs.targetVariable}}=.*/${{inputs.targetVariable}}=${{inputs.newValue}}/' $file
+          sed -i 's/${{github.event.client_payload.targetVariable}}=.*/${{github.event.client_payload.targetVariable}}=${{github.event.client_payload.newValue}}/' $file
           
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git add .
-          git commit -m "chore: sync packages version ${current_version}"
+          git commit -m "chore: bump default version for ${{github.event.client_payload.targetVariable}} to ${{github.event.client_payload.newValue}}"
           git push origin
 
       - uses: actions/github-script@v6
