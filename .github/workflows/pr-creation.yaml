@@ -18,7 +18,6 @@ jobs:
         env:
           FILE: test.env
         run: |
-          file=test.env
           sed -i 's/${{github.event.client_payload.targetVariable}}=.*/${{github.event.client_payload.targetVariable}}=${{github.event.client_payload.newValue}}/' $file
           
           git config user.name "${GITHUB_ACTOR}"
