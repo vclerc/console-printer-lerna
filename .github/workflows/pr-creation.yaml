@@ -43,7 +43,7 @@ jobs:
             if (res.data.length === 0) {
               await github.rest.pulls.create({
                 owner: '${{github.repository_owner}}',
-                repo: '${{github.repository}}',
+                repo: repo,
                 title: 'Updating services default version',
                 head: '${{vars.HEAD_BRANCH}}',
                 base: '${{vars.BASE_BRANCH}}'
