@@ -40,6 +40,16 @@ jobs:
         id: open-pull-request
         with:
           script: |
+            
+            let res = github.rest.pulls.list({
+              owner: 'vclerc',
+              repo: 'console-printer-lerna',
+              state: 'open',
+              head: 'feature/automated_versions_bump',
+              base: 'main'
+            });
+            
+            
             github.rest.pulls.create({
               owner: 'vclerc',
               repo: 'console-printer-lerna',
