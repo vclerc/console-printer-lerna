@@ -31,7 +31,7 @@ jobs:
           BASE_BRANCH: ${{ vars.BASE_BRANCH }}
         with:
           script: |
-            console.log("CONTEXT: " + $BASE_BRANCH);
+            console.log("CONTEXT: " + ${{vars.BASE_BRANCH}});
             
             let res = await github.rest.pulls.list({
               owner: 'vclerc',
