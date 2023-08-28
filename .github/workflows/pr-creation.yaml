@@ -49,5 +49,12 @@ jobs:
               base: 'main'
             });
             
-            console.log('what we get: ' + JSON.stringify(res));
-            console.log('what we get: ' + res);
+            if (res.data.length === 0) {
+              await github.rest.pulls.create({
+                owner: 'vclerc',
+                repo: 'console-printer-lerna',
+                title: 'Testing PR creation',
+                head: 'feature/automated_versions_bump',
+                base: 'main'
+              });
+            }
