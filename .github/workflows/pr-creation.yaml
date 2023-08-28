@@ -41,9 +41,9 @@ jobs:
         with:
           script: |
             github.rest.pulls.create({
-              'vclerc',
-              'console-printer-lerna',
-              'Testing PR creation',
-              'feature/automated_versions_bump',
-              'main'
+              owner: 'vclerc',
+              repo: 'console-printer-lerna',
+              title: 'Testing PR creation',
+              head: 'feature/automated_versions_bump',
+              base: 'main'
             });
