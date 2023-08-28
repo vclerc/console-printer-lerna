@@ -34,19 +34,19 @@ jobs:
             console.log("OWNER: " + "${{github.repository_owner}}");
             
             let res = await github.rest.pulls.list({
-              owner: 'vclerc',
+              owner: '${{github.repository_owner}}',
               repo: 'console-printer-lerna',
               state: 'open',
-              head: 'vclerc:feature/automated_versions_bump',
+              head: '${{github.repository_owner}}:${{vars.HEAD_BRANCH}}',
               base: '${{vars.BASE_BRANCH}}'
             });
             
             if (res.data.length === 0) {
               await github.rest.pulls.create({
-                owner: 'vclerc',
+                owner: '${{github.repository_owner}}',
                 repo: 'console-printer-lerna',
                 title: 'Testing PR creation',
-                head: 'feature/automated_versions_bump',
+                head: '${{vars.HEAD_BRANCH}}',
                 base: '${{vars.BASE_BRANCH}}'
               });
             }
