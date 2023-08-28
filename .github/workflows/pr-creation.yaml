@@ -49,6 +49,7 @@ jobs:
               base: 'main'
             });
             
+            console.log('res: ' + JSON.stringify(res));
             
             github.rest.pulls.create({
               owner: 'vclerc',
