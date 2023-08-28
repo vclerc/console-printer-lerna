@@ -13,8 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: feature/automated_versions_bump
+          ref: ${{ vars.HEAD_BRANCH }}
       - id: update-env
+        env:
+          FILE: test.env
         run: |
           file=test.env
           sed -i 's/${{github.event.client_payload.targetVariable}}=.*/${{github.event.client_payload.targetVariable}}=${{github.event.client_payload.newValue}}/' $file
