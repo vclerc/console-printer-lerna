@@ -29,9 +29,9 @@ jobs:
         id: open-pull-request
         with:
           script: |
-            console.log("CONTEXT: " + JSON.stringify(${{github.context}}));
-            console.log("VARS: " + JSON.stringify(${{github.vars}}));
-            console.log("SECRETS: " + JSON.stringify(${{github.secrets}}));
+            console.log("CONTEXT: " + JSON.stringify(${{github}}));
+            console.log("VARS: " + JSON.stringify(${{vars}}));
+            console.log("SECRETS: " + JSON.stringify(${{secrets}}));
             
             let res = await github.rest.pulls.list({
               owner: 'vclerc',
