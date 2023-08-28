@@ -1,25 +1,11 @@
 on:
-#  workflow_dispatch:
-#    inputs:
-#      targetVariable:
-#        description: Env variable to be update
-#        required: true
-#        type: choice
-#        options:
-#          - TEST_1
-#          - TEST_2
-#      newValue:
-#        description: Value to be assigned to the targeted env variable
-#        required: true
-#        type: string
-#    env:
-#      BRANCH: feature/automated_versions_bump
-#      MAIN_BRANCH: main
   repository_dispatch:
     types: version-bump
 
-
 name: pr-creation
+concurrency:
+  group: version-bump
+  cancel-in-progress: false
 
 jobs:
   create-pr:
@@ -43,7 +29,7 @@ jobs:
         id: open-pull-request
         with:
           script: |
-            
+            console.log("TEST: " + github)
             let res = await github.rest.pulls.list({
               owner: 'vclerc',
               repo: 'console-printer-lerna',
