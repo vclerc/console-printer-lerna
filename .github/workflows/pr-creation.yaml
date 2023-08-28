@@ -41,7 +41,7 @@ jobs:
         with:
           script: |
             
-            let res = github.rest.pulls.list({
+            let res = await github.rest.pulls.list({
               owner: 'vclerc',
               repo: 'console-printer-lerna',
               state: 'open',
