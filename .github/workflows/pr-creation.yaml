@@ -29,13 +29,9 @@ jobs:
         id: open-pull-request
         with:
           script: |
-            console.log("BASE: " + "${{vars.BASE_BRANCH}}");
-            console.log("HEAD: " + "${{vars.HEAD_BRANCH}}");
-            console.log("OWNER: " + "${{github.repository_owner}}");
-            
             let res = await github.rest.pulls.list({
               owner: '${{github.repository_owner}}',
-              repo: 'console-printer-lerna',
+                repo: '${{github.repository}}',
               state: 'open',
               head: '${{github.repository_owner}}:${{vars.HEAD_BRANCH}}',
               base: '${{vars.BASE_BRANCH}}'
@@ -44,8 +40,8 @@ jobs:
             if (res.data.length === 0) {
               await github.rest.pulls.create({
                 owner: '${{github.repository_owner}}',
-                repo: 'console-printer-lerna',
-                title: 'Testing PR creation',
+                repo: '${{github.repository}}',
+                title: 'Updating services default version',
                 head: '${{vars.HEAD_BRANCH}}',
                 base: '${{vars.BASE_BRANCH}}'
               });
