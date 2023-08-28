@@ -29,14 +29,16 @@ jobs:
         id: open-pull-request
         with:
           script: |
-            console.log("CONTEXT: " + "${{vars.BASE_BRANCH}}");
+            console.log("BASE: " + "${{vars.BASE_BRANCH}}");
+            console.log("HEAD: " + "${{vars.HEAD_BRANCH}}");
+            console.log("OWNER: " + "${{github.repository_owner}}");
             
             let res = await github.rest.pulls.list({
               owner: 'vclerc',
               repo: 'console-printer-lerna',
               state: 'open',
               head: 'vclerc:feature/automated_versions_bump',
-              base: 'main'
+              base: '${{vars.BASE_BRANCH}}'
             });
             
             if (res.data.length === 0) {
@@ -45,6 +47,6 @@ jobs:
                 repo: 'console-printer-lerna',
                 title: 'Testing PR creation',
                 head: 'feature/automated_versions_bump',
-                base: 'main'
+                base: '${{vars.BASE_BRANCH}}'
               });
             }
