@@ -13,7 +13,7 @@ on:
         required: true
         type: string
     env:
-      BRANCH: feature/automated_versions bump
+      BRANCH: feature/automated_versions_bump
       MAIN_BRANCH: main
 
 name: pr-creation
@@ -36,4 +36,14 @@ jobs:
           git commit -m "chore: sync packages version ${current_version}"
           git push origin
 
-            
+      - uses: actions/github-script@v6
+        id: open-pull-request
+        with:
+          script: |
+            github.rest.pulls.create({
+              'vclerc',
+              'console-printer-lerna',
+              'Testing PR creation',
+              'feature/automated_versions_bump',
+              'main'
+            });
