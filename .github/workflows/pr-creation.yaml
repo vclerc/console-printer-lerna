@@ -1,4 +1,18 @@
 on:
+  workflow_dispatch:
+    inputs:
+      targetVariable:
+        description: Env variable to be update
+        required: true
+        type: choice
+        options:
+          - TEST_1
+          - TEST_2
+      newValue:
+        description: Value to be assigned to the targeted env variable
+        required: true
+        type: string
+
   repository_dispatch:
     types: version-bump
 
@@ -30,6 +44,7 @@ jobs:
         id: open-pull-request
         with:
           script: |
+            console.log("Test: " + "${{ github.event_name }}");
             let repo = '${{github.repository}}'.split('/')[1];
             let res = await github.rest.pulls.list({
               owner: '${{github.repository_owner}}',
