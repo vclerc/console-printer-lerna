@@ -41,7 +41,7 @@ jobs:
           git push origin
 
       - uses: actions/github-script@v6
-        id: open-pull-request
+        id: test
         if: github.event_name == 'workflow_dispatch'
         with:
           script: |
