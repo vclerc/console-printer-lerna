@@ -40,12 +40,12 @@ jobs:
         env:
           FILE: test.env
         run: |
-          sed -i 's/${{github.event.client_payload.targetVariable}}=.*/${{github.event.client_payload.targetVariable}}=${{github.event.client_payload.newValue}}/' $FILE
+          sed -i 's/${{inputs.targetVariable}}=.*/${{inputs.targetVariable}}=${{inputs.newValue}}/' $FILE
           
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git add .
-          git commit -m "chore: bump default version for ${{github.event.client_payload.targetVariable}} to ${{github.event.client_payload.newValue}}"
+          git commit -m "chore: bump default version for ${{inputs.targetVariable}} to ${{inputs.newValue}}"
           git push origin
 
       - uses: actions/github-script@v6
