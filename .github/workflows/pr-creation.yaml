@@ -4,10 +4,7 @@ on:
       targetVariable:
         description: Env variable to be update
         required: true
-        type: choice
-        options:
-          - TEST_1
-          - TEST_2
+        type: string
       newValue:
         description: Value to be assigned to the targeted env variable
         required: true
