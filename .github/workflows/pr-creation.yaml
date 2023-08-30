@@ -1,5 +1,5 @@
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       targetVariable:
         description: Env variable to be update
