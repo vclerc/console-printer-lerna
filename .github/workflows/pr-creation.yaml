@@ -1,10 +1,13 @@
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       targetVariable:
         description: Env variable to be update
         required: true
-        type: string
+        type: choice
+        options:
+          - TEST_1
+          - TEST_2
       newValue:
         description: Value to be assigned to the targeted env variable
         required: true
