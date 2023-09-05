@@ -28,17 +28,9 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: ${{ vars.HEAD_BRANCH }}
-
-      - uses: actions/github-script@v6
-        id: test
-        if: github.event_name == 'workflow_dispatch'
-        with:
-          script: |
-            console.log("YEAH !")
-
       - id: update-env
         env:
-          FILE: test.env
+          FILE: compose/v3/.env
         run: |
           sed -i 's/${{inputs.targetVariable}}=.*/${{inputs.targetVariable}}=${{inputs.newValue}}/' $FILE
           
