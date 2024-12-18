@@ -27,6 +27,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+## [1.2.0](https://github.com/vclerc/console-printer-lerna/compare/test2-v1.1.0...test2-v1.2.0) (2023-08-28)
+
+
+### Features
+
+* mock feat ([dac636a](https://github.com/vclerc/console-printer-lerna/commit/dac636a16ce52577d393c4205d58931150e4105f))
+
 ## [1.1.0](https://github.com/vclerc/console-printer-lerna/compare/test2-v1.0.2...test2-v1.1.0) (2023-03-23)
 
 
