@@ -14,22 +14,18 @@ jobs:
         with:
           script: |
             console.log('+++++++++++++++++++++++++++++++++++++++++');
-            console.log(`github.event: ${JSON.stringify(github.event, null, 4)}`);
-            console.log(`github.event_name: ${JSON.stringify(github.event_name, null, 4)}`);
             console.log(`context: ${JSON.stringify(context, null, 4)}`);
             console.log('+++++++++++++++++++++++++++++++++++++++++');
       - name: Set Push Tag Suffix
         id: push-tag-suffix
-        if: ${{ false }}
         run: |
           # Add Push Tag Suffix to ENV
           echo "PUSH_TAG_SUFFIX=-${GITHUB_SHA:0:8}" >> "$GITHUB_OUTPUT"
       - name: Set Push Tag
         id: push-tag
-        if: ${{ false }}
         env:
           PUSH_TAG_SUFFIX: ${{ steps.push-tag-suffix.outputs.PUSH_TAG_SUFFIX }}
         run: |
           # Add Push Tag to ENV
-          VERSION=`node -e "process.stdout.write(require('./packages/package.json').version)"`
+          VERSION=`node -e "process.stdout.write(require('./packages/console-wrapper/package.json').version)"`
           echo "PUSH_TAG=${VERSION}${PUSH_TAG_SUFFIX}" >> "$GITHUB_OUTPUT"
