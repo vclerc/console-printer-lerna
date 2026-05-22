@@ -3,7 +3,6 @@
     "release-type": "node",
     "always-update": true,
     "separate-pull-requests": false,
-    "pull-request-title-pattern": "chore(release): release yuba ${version} (target: ${scope})",
     "packages": {
         "packages/test-server": {
             "component": "test",
@@ -13,16 +12,5 @@
             "component": "test2",
             "component-no-space": true
         }
-    },
-    "plugins": [
-        {
-            "type": "linked-versions",
-            "group-name": "servers",
-            "updateAllPackages": true,
-            "components": [
-                "test",
-                "test2"
-            ]
-        }
-    ]
+    }
 }
