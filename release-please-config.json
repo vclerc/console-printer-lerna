@@ -5,12 +5,21 @@
     "separate-pull-requests": false,
     "packages": {
         "packages/test-server": {
-            "component": "test",
-            "component-no-space": true
+            "component": "test"
         },
         "packages/test-server-alt": {
-            "component": "test2",
-            "component-no-space": true
+            "component": "test2"
         }
-    }
+    },
+    "plugins": [
+        {
+            "type": "linked-versions",
+            "groupName": "main-group",
+            "updateAllPackages": true,
+            "components": [
+                "test",
+                "test2"
+            ]
+        }
+    ]
 }
