@@ -5,13 +5,14 @@
     "separate-pull-requests": false,
     "include-v-in-release-name": true,
     "include-v-in-tag": true,
+    "skip-github-release": true,
+    "include-component-in-tag": false,
     "packages": {
         "packages/test-server": {
             "component": "test"
         },
         "packages/test-server-alt": {
-            "component": "test2",
-            "skip-github-release": true
+            "component": "test2"
         }
     },
     "plugins": [
