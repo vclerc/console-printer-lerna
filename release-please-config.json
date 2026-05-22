@@ -3,6 +3,9 @@
     "release-type": "node",
     "always-update": true,
     "separate-pull-requests": false,
+    "include-v-in-release-name": true,
+    "include-v-in-tag": true,
+    "include-component-in-tag": false,
     "packages": {
         "packages/test-server": {
             "component": "test"
