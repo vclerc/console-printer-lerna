@@ -27,6 +27,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+## [1.1.4](https://github.com/vclerc/console-printer-lerna/compare/test2-v1.1.0...test2-v1.1.4) (2026-05-22)
+
+
+### Miscellaneous Chores
+
+* **test2:** Synchronize main-group versions
+
 ## [1.1.0](https://github.com/vclerc/console-printer-lerna/compare/test2-v1.0.2...test2-v1.1.0) (2023-03-23)
 
 
