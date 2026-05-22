@@ -2,9 +2,6 @@
     "bootstrap-sha": "85d5f17ea323e226581b516ad24bf348a2f39477",
     "release-type": "node",
     "always-update": true,
-    "separate-pull-requests": false,
-    "include-v-in-tag": true,
-    "include-v-in-release-name": true,
     "packages": {
         "packages/test-server": {
             "component": "test"
@@ -19,7 +16,8 @@
             "group-name": "servers",
             "updateAllPackages": true,
             "components": [
-                "test", "test2"
+                "test",
+                "test2"
             ]
         }
     ]
