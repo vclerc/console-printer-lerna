@@ -4,7 +4,6 @@
     "always-update": true,
     "separate-pull-requests": false,
     "include-v-in-tag": true,
-    "include-component-in-tag": false,
     "include-v-in-release-name": true,
     "packages": {
         "packages/test-server": {
