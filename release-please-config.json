@@ -2,6 +2,7 @@
     "bootstrap-sha": "85d5f17ea323e226581b516ad24bf348a2f39477",
     "release-type": "node",
     "always-update": true,
+    "separate-pull-requests": false,
     "packages": {
         "packages/test-server": {
             "component": "test"
