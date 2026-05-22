@@ -7,32 +7,9 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      - uses: google-github-actions/release-please-action@v3.5.0
+      - uses: googleapis/release-please-action@v4
         id: release
         with:
-          default-branch: ${{ github.ref_name }}
-          command: manifest
-      - name: Set current date
-        id: set_date
-        run: echo "::set-output name=date::$(date +'%Y%m%d')"
-      - name: Test reading output
-        id: read_output
-        run: echo release_created ${{ toJSON(steps.set_date.outputs.date) }}
-      - uses: actions/github-script@v6
-        name: create release branch
-        id: create-stable
-        if: ${{ steps.release.outputs.releases_created && github.ref_name == 'main' }}
-        with:
-          script: |
-            await github.rest.git.createRef({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              ref: "refs/heads/release/${{ steps.set_date.outputs.date }}",
-              sha: '${{ github.sha }}'
-            });
-      - name: Test reading output
-        id: read_output_2
-        run: echo release_created ${{ toJSON(steps.release.outputs) }}
-      - name: Read results
-        id: check-results
-        run: echo "${{ steps.create-stable.outputs.result }}"
+          config-file: release-please-config.json
+          target-branch: ${{ github.ref_name }}
+          manifest-file: .release-please-manifest.json
