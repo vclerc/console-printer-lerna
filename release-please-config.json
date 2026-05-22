@@ -5,10 +5,12 @@
     "separate-pull-requests": false,
     "packages": {
         "packages/test-server": {
-            "component": "test"
+            "component": "test",
+            "component-no-space": true
         },
         "packages/test-server-alt": {
-            "component": "test2"
+            "component": "test2",
+            "component-no-space": true
         }
     },
     "plugins": [
