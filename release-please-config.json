@@ -1,6 +1,4 @@
 {
-    "bootstrap-sha": "b557586b10aabffb97d8ccd17cff192595c7c80a",
-    "last-release-sha": "b557586b10aabffb97d8ccd17cff192595c7c80a",
     "release-type": "node",
     "always-update": true,
     "separate-pull-requests": false,
@@ -10,7 +8,8 @@
             "component": "test"
         },
         "packages/test-server-alt": {
-            "component": "test2"
+            "component": "test2",
+            "skip-github-release": true
         }
     },
     "plugins": [
