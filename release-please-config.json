@@ -12,7 +12,8 @@
             "component": "test"
         },
         "packages/test-server-alt": {
-            "component": "test2"
+            "component": "test2",
+            "skip-github-release": true
         }
     },
     "plugins": [
