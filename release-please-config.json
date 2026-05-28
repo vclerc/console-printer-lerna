@@ -1,11 +1,11 @@
 {
-    "bootstrap-sha": "e471fd0a9a63b450539a29549829c4a77b74acd2",
+    "bootstrap-sha": "b557586b10aabffb97d8ccd17cff192595c7c80a",
+    "last-release-sha": "b557586b10aabffb97d8ccd17cff192595c7c80a",
     "release-type": "node",
     "always-update": true,
     "separate-pull-requests": false,
     "include-v-in-release-name": true,
     "include-v-in-tag": true,
-    "skip-github-release": true,
     "include-component-in-tag": false,
     "packages": {
         "packages/test-server": {
