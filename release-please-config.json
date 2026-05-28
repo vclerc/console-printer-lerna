@@ -5,12 +5,10 @@
     "separate-pull-requests": false,
     "packages": {
         "packages/test-server": {
-            "component": "test",
-            "include-component-in-tag": false
+            "component": "test"
         },
         "packages/test-server-alt": {
-            "component": "test2",
-            "skip-github-release": true
+            "component": "test2"
         }
     },
     "plugins": [
