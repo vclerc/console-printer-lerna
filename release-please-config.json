@@ -2,10 +2,10 @@
     "release-type": "node",
     "always-update": true,
     "separate-pull-requests": false,
-    "include-component-in-tag": true,
     "packages": {
         "packages/test-server": {
-            "component": "test"
+            "component": "test",
+            "include-component-in-tag": false
         },
         "packages/test-server-alt": {
             "component": "test2",
