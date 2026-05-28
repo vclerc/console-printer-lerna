@@ -27,6 +27,38 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
+## [1.2.0](https://github.com/vclerc/console-printer-lerna/compare/test2-v1.1.15...test2-v1.2.0) (2026-05-28)
+
+
+### Features
+
+* mock feat ([dac636a](https://github.com/vclerc/console-printer-lerna/commit/dac636a16ce52577d393c4205d58931150e4105f))
+* update all tests server texts ([f09096c](https://github.com/vclerc/console-printer-lerna/commit/f09096ca15e9ec275278395be859c8031ff148dc))
+* Update displayed texts ([d7793bd](https://github.com/vclerc/console-printer-lerna/commit/d7793bdda8c5a1c16e306e7f85cb387987e575a1))
+* update tags ([8239139](https://github.com/vclerc/console-printer-lerna/commit/8239139a89cc8c3a32da824c996109d071b88db5))
+* update version to advanced number ([0555bf3](https://github.com/vclerc/console-printer-lerna/commit/0555bf3777000d737ecdc06fce7ddc5dc0af4af9))
+
+
+### Bug Fixes
+
+* correct alt server tag ([2c768c7](https://github.com/vclerc/console-printer-lerna/commit/2c768c7db3e0bbf111dd7bf0d9fb3321fae0b85d))
+* correct alt server tag ([1639b5c](https://github.com/vclerc/console-printer-lerna/commit/1639b5c5bc77d3e0548eae0a27c9c55ff7b84394))
+* correct alt server tag ([#4](https://github.com/vclerc/console-printer-lerna/issues/4)) ([c77f8a4](https://github.com/vclerc/console-printer-lerna/commit/c77f8a41213763868711d4f9416a077be37a2701))
+* typo ([f7e632d](https://github.com/vclerc/console-printer-lerna/commit/f7e632d4c2753785c5795d93c6d9c7485bc29d37))
+* typo ([f7e632d](https://github.com/vclerc/console-printer-lerna/commit/f7e632d4c2753785c5795d93c6d9c7485bc29d37))
+* update alt test server text ([2bc0add](https://github.com/vclerc/console-printer-lerna/commit/2bc0addc773d602fd7a6acbb840dfa292721e388))
+* update messages ([25bce25](https://github.com/vclerc/console-printer-lerna/commit/25bce25fdb15fac16fa13cdd00c35ad70ff90710))
+* update response from alt server ([a921e04](https://github.com/vclerc/console-printer-lerna/commit/a921e047b24ebdaeb1e38a786d37111f580e61df))
+* update server 2 ([0327913](https://github.com/vclerc/console-printer-lerna/commit/0327913b8ab2f597749c315a838661c16039322f))
+* update server 2 ([f465749](https://github.com/vclerc/console-printer-lerna/commit/f465749bc3fb10ee1148af2a3e233e61dd0621cc))
+* update server 2 ([4ef23f0](https://github.com/vclerc/console-printer-lerna/commit/4ef23f0c0842c77805e20062e09b59a6c13df6aa))
+* update server 2 ([c23c85e](https://github.com/vclerc/console-printer-lerna/commit/c23c85ee75a9d0ed51d5619bcb9e829887330baf))
+* update server 2 ([d2c4c0d](https://github.com/vclerc/console-printer-lerna/commit/d2c4c0daae29438078d12dd641264f751bb613e9))
+* update test server alt text ([f09096c](https://github.com/vclerc/console-printer-lerna/commit/f09096ca15e9ec275278395be859c8031ff148dc))
+* update test server alt text ([948434b](https://github.com/vclerc/console-printer-lerna/commit/948434b5370cc60e9bec07018ab7a0ead2bc223e))
+* update test server alt text ([10bf7de](https://github.com/vclerc/console-printer-lerna/commit/10bf7de5754ac960a44b71201934885d0aa82f5f))
+* update test server alt text ([5df7c87](https://github.com/vclerc/console-printer-lerna/commit/5df7c879dbe6a212c12ba9b6be115b34bd776d47))
+
 ## [1.1.15](https://github.com/vclerc/console-printer-lerna/compare/test2-v1.1.14...test2-v1.1.15) (2026-05-28)
 
 
